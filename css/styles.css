@@ -1,0 +1,160 @@
+/* Reset and Variables */
+
+:root {
+    /* Colors */
+    --orange: #e38826;
+    --dark-cyan: #006970;
+    --dark-green: #004140;
+    /* for paragraphs: */
+    --trans-white: #ffffff85;
+    /* for background, headings, buttons: */
+    --light-gray: #f2f2f2;
+    --BSbold: "Big Shoulders Display";
+    --Lexend: "Lexend Deca";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/* Containers */
+
+div.card-component {
+    width: 920px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+section {
+    font-family: var(--Lexend);
+    padding: 4.8rem;
+}
+
+section.sedans {
+    background-color: var(--orange);
+    border-radius: .8rem 0 0 .8rem;
+}
+
+section.suv {
+    background-color: var(--dark-cyan);
+}
+
+section.luxury {
+    background-color: var(--dark-green);
+    border-radius: 0 .8rem .8rem 0;
+}
+
+
+/* Elements */
+
+button {
+    background-color: #f2f2f2;
+    font-family: var(--Lexend);
+    font-size: 1.5rem;
+    height: 4.8rem;
+    width: 14.6rem;
+    border-radius: 2.4rem;
+    border: none;
+}
+
+button.btn-sedan {
+    color: var(--orange);
+}
+
+button.btn-sedan:hover {
+    color: white;
+    border: 2px solid white;
+    background-color: var(--orange);
+}
+
+button.btn-suv {
+    color: var(--dark-cyan);
+}
+
+button.btn-suv:hover {
+    color: white;
+    border: 2px solid white;
+    background-color: var(--dark-cyan);
+}
+
+button.btn-luxury {
+    color: var(--dark-green);
+}
+
+button.btn-luxury:hover {
+    color: white;
+    border: 2px solid white;
+    background-color: var(--dark-green);
+}
+
+h2 {
+    font-family: var(--BSbold);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    padding-bottom: 2.6rem;
+}
+
+p {
+    font-family: var(--Lexend);
+    color: var(--trans-white);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-bottom: 8.5rem;
+}
+
+svg {
+    box-sizing: content-box;
+    padding-bottom: 3.3rem;
+}
+
+
+/* IDs and Classes */
+
+
+/* Media Query @375px */
+
+@media only screen and (max-width: 375px) {
+    div.card-component {
+        width: 327px;
+        height: 1326px;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    main {
+        height: auto;
+        padding-top: 8.8rem;
+        padding-bottom: 8.8rem;
+    }
+    section {
+        height: 442px;
+        /* padding: 49px; */
+    }
+    section.sedans {
+        border-radius: 8px 8px 0 0;
+    }
+    section.luxury {
+        border-radius: 0 0 8px 8px;
+    }
+    p {
+        padding-bottom: 2.5rem;
+    }
+}
